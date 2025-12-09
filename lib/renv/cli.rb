@@ -25,7 +25,7 @@ module Renv
       puts "Only in #{file_b}: #{d[:only_in_b].join(', ')}" unless d[:only_in_b].empty?
       puts "Different values: #{d[:missmatched_values].join(', ')}" unless d[:missmatched_values].empty?
 
-      puts 'No differences found.' if d[:only_in_a].empty? && d[:only_in_b].empty? && d[:mismatched_values].empty?
+      puts 'No differences found.' if d[:only_in_a].empty? && d[:only_in_b].empty? && d[:missmatched_values].empty?
     end
   end
 end
