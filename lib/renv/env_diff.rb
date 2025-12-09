@@ -5,7 +5,6 @@ module Renv
       @b = EnvFile.new(file_b).vars
     end
 
-    desc "diff", "Compare two .env files and show missmatches"
     def diff
       {
         only_in_a: @a.keys - @b.keys,
