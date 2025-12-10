@@ -12,7 +12,7 @@
 - Create your own env.d.ts TypeScript interface from .env file
 - **Few dependencies** only Thor is required
 
-## Quick Start
+## Quick Start (Ruby need to be installed)
 
 ```bash 
 # Clone the repository to your desired location
@@ -39,6 +39,10 @@ export PATH="/workspaces/renv/bin:$PATH"' >> ~/.bashrc
 # Generate TypeScript types
 - renv generate_types --input examples/.env --output types/env.d.ts
 ```
+
+## Why?
+- "Why even create such of useless tool" -> Why not!
+- "Why Ruby? Its slow as hell?" -> because i can, and ruby is beautiful
 
 ## License
 
