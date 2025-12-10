@@ -13,7 +13,7 @@ module Renv
     option :output, default: 'src/env.d.ts', desc: 'Output TypeScript file'
     def generate_types
       EnvTypes.new(options[:input]).generate(options[:output])
-      puts 'Generated TypeScript definitions at: #{options[:output]}'
+      puts "Generated TypeScript definitions at: #{options[:output]}"
     end
 
     desc 'diff FILE_A FILE_B', 'Compare two .env files and show differences'
