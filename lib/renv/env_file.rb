@@ -8,8 +8,6 @@ module Renv
       @vars = parse_lines @lines
     end
 
-    private
-
     def parse_lines(lines)
       lines
         .map(&:strip)

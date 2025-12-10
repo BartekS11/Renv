@@ -8,5 +8,5 @@ require_relative 'renv/env_types'
 require_relative 'renv/cli'
 
 module Renv
-  VERSION = '0.1.0'
+  VERSION = '0.1.1'
 end

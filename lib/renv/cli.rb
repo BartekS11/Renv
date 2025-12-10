@@ -1,10 +1,8 @@
 module Renv
   class CLI < Thor
-    desc 'sync FILES...', 'Sync keys across multiple .env files'
+    desc 'sync FILES...', 'Sync keys across multiple .env files (need to provide at least one)'
     def sync(*files)
-      return unless files.empty?
-
-      puts 'Please provide at least one .env file to synchronize'
+      return puts 'Please provide at least one .env file to synchronize' if files.empty?
 
       Renv::EnvSync.new(files).sync
       puts "Synced: #{files.join(', ')}"
