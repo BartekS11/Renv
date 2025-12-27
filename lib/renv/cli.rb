@@ -25,5 +25,16 @@ module Renv
 
       puts 'No differences found.' if d[:only_in_a].empty? && d[:only_in_b].empty? && d[:missmatched_values].empty?
     end
+
+    desc 'codegen FILES, LANGUAGE', 'Generate code from .env schema'
+    option :out, default: '.env', type: :string, desc: 'Output file in desired language', aliases: '-o'
+    option :lang, type: :string, desc: 'Output file in desired language', aliases: '-l'
+    def codegen(env_file)
+      schema = EnvFile.new(env_file).vars
+      file_ext = Generators::Codegen.define_lang_extension(options[:lang])
+      output = "#{options[:out]}.#{file_ext}"
+
+      Generators::Codegen.run(options[:lang], schema, output)
+    end
   end
 end
