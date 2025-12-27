@@ -12,6 +12,7 @@ require_relative 'codegen/codegen'
 require_relative 'codegen/go_generator'
 require_relative 'codegen/ts_generator'
 require_relative 'codegen/python_generator'
+require_relative 'codegen/rust_generator'
 
 module Renv
   VERSION = '0.1.1'
